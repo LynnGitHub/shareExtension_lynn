@@ -36,13 +36,7 @@
     NSUserDefaults *userDefaults = [[NSUserDefaults alloc] initWithSuiteName:@"group.com.ShareExtensions"];
     if ([userDefaults boolForKey:@"has-new-share"])
     {
-        NSLog(
-              @"\n  public.image-->>%@,\n  public.url-->>%@"
-              ,[userDefaults valueForKey:@"public.image"]
-              ,[userDefaults valueForKey:@"public.url"]);
-        
         NSString *string = @"";
-        
         if ([userDefaults valueForKey:@"public.image"])
         {
             string = [userDefaults valueForKey:@"public.image"];
@@ -53,17 +47,19 @@
         }
         
         NSData* data = [string dataUsingEncoding:NSUTF8StringEncoding];
-        NSDictionary *jsonDict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:nil];
+        NSDictionary *jsonDict = [NSJSONSerialization JSONObjectWithData:data
+                                                                 options:NSJSONReadingMutableLeaves
+                                                                   error:nil];
         
-        
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"share-public-notification" object:self userInfo:jsonDict];
+        //        发送通知
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"share-public-notification"
+                                                            object:self
+                                                          userInfo:jsonDict];
         
         
         //重置分享标识
         [userDefaults setBool:NO forKey:@"has-new-share"];
         
-        //清除数据
-//        [userDefaults removeObjectForKey:@"group.com.ShareExtensions"];
         if ([userDefaults valueForKey:@"public.image"])
         {
             [userDefaults setValue:nil forKey:@"public.image"];

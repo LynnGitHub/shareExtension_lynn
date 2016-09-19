@@ -26,7 +26,22 @@
     _address.layer.shadowOffset = CGSizeMake(0, 2);
     _address.layer.shadowOpacity = 0.5;
 
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(fun:) name:@"share-public-notification" object:nil];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(fun:)
+                                                 name:@"share-public-notification"
+                                               object:nil];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                    name:@"share-public-notification" object:nil];
 }
 
 - (void)fun:(NSNotification *)notification
@@ -39,7 +54,6 @@
     [_content setText:[notification.userInfo objectForKey:@"content"]];
     [_address setText:[notification.userInfo objectForKey:@"address"]];
 }
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
