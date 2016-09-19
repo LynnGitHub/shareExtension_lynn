@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "392CB078812EAC9A1607D4AC20B271184791F620",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "392CB078812EAC9A1607D4AC20B271184791F620" : 0,
+    "9C6913AD1C99F6CF3A6A76A13740FDCB2C867BDE" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "2B80F455-D2DE-4497-AF56-F93F3440BEC6",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "392CB078812EAC9A1607D4AC20B271184791F620" : "ShareExtensionDemo\/",
+    "9C6913AD1C99F6CF3A6A76A13740FDCB2C867BDE" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "ShareExtensionDemo",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "ShareExtensionDemo.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "git.oschina.net:heqings\/fitness.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "392CB078812EAC9A1607D4AC20B271184791F620"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/LynnGitHub\/ShareExtension.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "9C6913AD1C99F6CF3A6A76A13740FDCB2C867BDE"
+    }
+  ]
+}

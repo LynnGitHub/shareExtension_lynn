@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jfN-0X-AF8">
+                                <rect key="frame" x="50" y="150" width="275" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="mWL-Dn-NLg"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="内容" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c7C-RT-6kG">
+                                <rect key="frame" x="20" y="380" width="335" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="Fcn-G8-47t"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="地址" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U7t-qK-dsd">
+                                <rect key="frame" x="20" y="420" width="335" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="XCF-JB-u9J"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="U7t-qK-dsd" secondAttribute="trailing" constant="20" id="0C3-h5-Gby"/>
+                            <constraint firstItem="U7t-qK-dsd" firstAttribute="top" secondItem="c7C-RT-6kG" secondAttribute="bottom" constant="19" id="KFR-5M-9qR"/>
+                            <constraint firstItem="jfN-0X-AF8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="50" id="NVZ-WQ-ehC"/>
+                            <constraint firstItem="U7t-qK-dsd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="R1N-dU-Ip2"/>
+                            <constraint firstItem="c7C-RT-6kG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="SgH-Pq-Dak"/>
+                            <constraint firstItem="c7C-RT-6kG" firstAttribute="top" secondItem="jfN-0X-AF8" secondAttribute="bottom" constant="30" id="mME-sh-Qc9"/>
+                            <constraint firstItem="jfN-0X-AF8" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="130" id="xic-bA-9xI"/>
+                            <constraint firstAttribute="trailing" secondItem="jfN-0X-AF8" secondAttribute="trailing" constant="50" id="y4g-B6-poT"/>
+                            <constraint firstAttribute="trailing" secondItem="c7C-RT-6kG" secondAttribute="trailing" constant="20" id="zsL-Am-s0x"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="address" destination="U7t-qK-dsd" id="nAV-IK-rhY"/>
+                        <outlet property="content" destination="c7C-RT-6kG" id="0ls-fr-uaO"/>
+                        <outlet property="imgView" destination="jfN-0X-AF8" id="bmE-xy-ZGe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="282.5" y="415.5"/>
+        </scene>
+    </scenes>
+</document>
