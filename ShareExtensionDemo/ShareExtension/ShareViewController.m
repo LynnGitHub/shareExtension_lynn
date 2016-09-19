@@ -45,7 +45,6 @@ static NSInteger const maxCharactersAllowed = 140;
     [self.extensionContext.inputItems enumerateObjectsUsingBlock:^(NSExtensionItem * _Nonnull extItem, NSUInteger idx, BOOL * _Nonnull stop) {
         
         [extItem.attachments enumerateObjectsUsingBlock:^(NSItemProvider * _Nonnull itemProvider, NSUInteger idx, BOOL * _Nonnull stop) {
-            
             if ([itemProvider hasItemConformingToTypeIdentifier:@"public.image"])
             {
                 [weakSelf itemProvider:itemProvider
@@ -62,21 +61,16 @@ static NSInteger const maxCharactersAllowed = 140;
                        bIsHasExistsUrl:hasExistsUrl
                                bIsStop:stop];
             }
-            
         }];
         
         if (hasExistsUrl)
-        {
             *stop = YES;
-        }
-        
     }];
     
     if (!hasExistsUrl)
-    {
         //直接退出
-        [self.extensionContext completeRequestReturningItems:@[] completionHandler:nil];
-    }
+        [self.extensionContext completeRequestReturningItems:@[]
+                                           completionHandler:nil];
 }
 
 //添加一些items，比如定位当下位置
